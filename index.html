@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BonusPortti &mdash; Suomen parhaat nettikasinot</title>
-<meta name="description" content="BonusPortti kokoaa Suomen parhaat nettikasinot yhdelle sivulle: bonukset, lisenssit ja kotiutusnopeus vertailtuna.">
+<title>BonusPortti &mdash; Parhaat tarjoukset juuri sinulle</title>
+<meta name="description" content="BonusPortti kokoaa Suomen nettikasinot yhdelle sivulle: tarkistetut kasinot, selkeät bonusehdot ja rehelliset arviot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎰</text></svg>">
 </head>
@@ -21,98 +21,231 @@
         <text x="150" y="46" class="logo-word logo-portti" font-size="46">Portti</text>
       </svg>
     </a>
-    <span class="age-badge">18+</span>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Avaa valikko">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#kasinot" class="active">Kasinot</a>
+      <a href="#nostot">Tarjoukset</a>
+      <a href="#miksi">Mikä on BonusPortti?</a>
+      <a href="#opas">Opas</a>
+    </nav>
   </div>
 </header>
 
 <main id="top">
 
-  <section class="intro">
-    <div class="wrap">
-      <p class="eyebrow">Päivitetty syyskuussa 2026</p>
-      <h1>Parhaat tarjoukset juuri sinulle, yhdellä sivulla.</h1>
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1><span class="grad">Parhaat tarjoukset</span> juuri sinulle.</h1>
+        <p class="hero-sub">BonusPortti hyväksyy listalle vain kasinot, joiden taustat ja bonusehdot kestävät päivänvalon.</p>
+        <a href="#kasinot" class="btn btn-primary btn-large">Katso tarjoukset</a>
+      </div>
+      <div class="hero-stamp">
+        <svg class="stamp-svg" viewBox="0 0 220 220" role="img" aria-label="BonusPortin hyväksymä">
+          <defs>
+            <path id="arcTop" d="M 24,112 a 88,88 0 1 1 176,0" />
+            <path id="arcBottom" d="M 200,116 a 88,88 0 1 1 -176,0" />
+          </defs>
+          <circle class="stamp-ring" cx="110" cy="112" r="100" />
+          <circle class="stamp-ring stamp-ring-inner" cx="110" cy="112" r="86" />
+          <text class="stamp-text">
+            <textPath href="#arcTop" startOffset="50%" text-anchor="middle">BONUSPORTIN</textPath>
+          </text>
+          <text class="stamp-text">
+            <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">HYVÄKSYMÄ</textPath>
+          </text>
+          <g class="stamp-check" transform="translate(110,112)">
+            <circle r="34" class="stamp-check-bg" />
+            <path d="M -16,0 L -5,11 L 18,-14" />
+          </g>
+        </svg>
+        <p class="stamp-caption">Tarjoukset tarkastettu!</p>
+      </div>
     </div>
   </section>
 
-  <section class="casinos">
+  <section class="casinos" id="kasinot">
     <div class="wrap">
-      <div class="casino-grid">
 
-        <article class="casino-card">
-          <div class="casino-id">
-            <div class="mark" style="--tile:#17c999">ST</div>
-            <div>
-              <h2>Stake</h2>
-            </div>
+      <div class="casino-row featured">
+        <div class="casino-brand">
+          <div class="mark" style="--tile:#17c999">ST</div>
+          <div>
+            <h2>Stake</h2>
           </div>
-          <p class="bonus">Tervetuliaisbonus kolikkopeleihin ja vedonlyöntiin</p>
-          <ul class="tags">
-            <li>Kryptovaluutat</li>
-            <li>Laaja pelivalikoima</li>
-          </ul>
-          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </article>
+        </div>
+        <p class="offer">Suositut kolikkopelit ja vedonlyönti samalla tilillä</p>
+        <ul class="facts">
+          <li>Kryptovaluutat tuettuina</li>
+          <li>Laaja pelivalikoima</li>
+          <li>Tunnettu maailmanlaajuisesti</li>
+        </ul>
+        <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+      </div>
 
-        <article class="casino-card">
-          <div class="casino-id">
-            <div class="mark" style="--tile:#ff7a1a">WZ</div>
-            <div>
-              <h2>Wildz</h2>
-            </div>
+      <div class="casino-row">
+        <div class="casino-brand">
+          <div class="mark" style="--tile:#ff7a1a">WZ</div>
+          <div>
+            <h2>Wildz</h2>
           </div>
-          <p class="bonus">Tervetuliaisbonus uusille pelaajille</p>
-          <ul class="tags">
-            <li>Suosittu Pohjoismaissa</li>
-            <li>Nopeat kotiutukset</li>
-          </ul>
-          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </article>
+        </div>
+        <p class="offer">Suosittu valinta Pohjoismaissa</p>
+        <ul class="facts">
+          <li>Nopeat kotiutukset</li>
+          <li>Selkeä käyttöliittymä</li>
+          <li>Suosittu suomalaisten keskuudessa</li>
+        </ul>
+        <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+      </div>
 
-        <article class="casino-card">
-          <div class="casino-id">
-            <div class="mark" style="--tile:#7c5cff">SP</div>
-            <div>
-              <h2>Spinokkio</h2>
-            </div>
+      <div class="casino-row accent">
+        <div class="casino-brand">
+          <div class="mark" style="--tile:#7c5cff">SP</div>
+          <div>
+            <h2>Spinokkio</h2>
           </div>
-          <p class="bonus">Tervetuliaisbonus + ilmaiskierroksia</p>
-          <ul class="tags">
-            <li>Kolikkopelit</li>
-            <li>Live-kasino</li>
-          </ul>
-          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </article>
+        </div>
+        <p class="offer">Kolikkopelit ja live-kasino samassa paikassa</p>
+        <ul class="facts">
+          <li>Laaja pelivalikoima</li>
+          <li>Live-pöydät</li>
+          <li>Tervetuliaisbonus uusille pelaajille</li>
+        </ul>
+        <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+      </div>
 
-        <article class="casino-card">
-          <div class="casino-id">
-            <div class="mark" style="--tile:#e63966">JB</div>
-            <div>
-              <h2>Jackburst</h2>
-            </div>
+      <div class="casino-row">
+        <div class="casino-brand">
+          <div class="mark" style="--tile:#e63966">JB</div>
+          <div>
+            <h2>Jackburst</h2>
           </div>
-          <p class="bonus">Bonus ensimmäiselle talletukselle</p>
-          <ul class="tags">
-            <li>Jackpot-pelit</li>
-            <li>Mobiiliystävällinen</li>
-          </ul>
-          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </article>
+        </div>
+        <p class="offer">Jackpotit ja nopeat talletukset</p>
+        <ul class="facts">
+          <li>Jackpot-pelit</li>
+          <li>Mobiiliystävällinen</li>
+          <li>Bonus ensimmäiselle talletukselle</li>
+        </ul>
+        <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+      </div>
 
-        <article class="casino-card">
-          <div class="casino-id">
-            <div class="mark" style="--tile:#2f8fe0">HK</div>
-            <div>
-              <h2>Hype Kasino</h2>
-            </div>
+      <div class="casino-row">
+        <div class="casino-brand">
+          <div class="mark" style="--tile:#2f8fe0">HK</div>
+          <div>
+            <h2>Hype Kasino</h2>
           </div>
-          <p class="bonus">Tervetuliaisetu uusille pelaajille</p>
-          <ul class="tags">
-            <li>Kolikkopelit</li>
-            <li>Pöytäpelit</li>
-          </ul>
-          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </article>
+        </div>
+        <p class="offer">Tervetuliaisetu uusille pelaajille</p>
+        <ul class="facts">
+          <li>Kolikkopelit</li>
+          <li>Pöytäpelit</li>
+          <li>Nopea rekisteröityminen</li>
+        </ul>
+        <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+      </div>
 
+    </div>
+  </section>
+
+  <section class="highlights" id="nostot">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Nostot</p>
+        <h2 class="display">Kuukauden tarjoukset</h2>
+      </div>
+    </div>
+    <div class="carousel-wrap">
+      <button class="car-btn car-prev" id="carPrev" aria-label="Edellinen">&larr;</button>
+      <div class="carousel" id="carousel">
+        <article class="promo-card" style="--from:#17c999;--to:#1c4fd6">
+          <h3>Stake</h3>
+          <p>Suositut kolikkopelit ja vedonlyönti</p>
+          <a href="#" class="btn btn-light" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+        </article>
+        <article class="promo-card" style="--from:#ff7a1a;--to:#e63966">
+          <h3>Wildz</h3>
+          <p>Suosittu valinta Pohjoismaissa</p>
+          <a href="#" class="btn btn-light" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+        </article>
+        <article class="promo-card" style="--from:#7c5cff;--to:#3d72ff">
+          <h3>Spinokkio</h3>
+          <p>Kolikkopelit ja live-kasino</p>
+          <a href="#" class="btn btn-light" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+        </article>
+        <article class="promo-card" style="--from:#e63966;--to:#7c5cff">
+          <h3>Jackburst</h3>
+          <p>Jackpotit ja nopeat talletukset</p>
+          <a href="#" class="btn btn-light" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+        </article>
+        <article class="promo-card" style="--from:#2f8fe0;--to:#17c999">
+          <h3>Hype Kasino</h3>
+          <p>Tervetuliaisetu uusille pelaajille</p>
+          <a href="#" class="btn btn-light" rel="sponsored nofollow noopener" target="_blank">Pelaa nyt</a>
+        </article>
+      </div>
+      <button class="car-btn car-next" id="carNext" aria-label="Seuraava">&rarr;</button>
+    </div>
+    <div class="carousel-dots" id="carDots"></div>
+    <p class="carousel-hint">Vedä &middot; pyyhkäise &middot; tai käytä nuolia</p>
+  </section>
+
+  <section class="why" id="miksi">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Miksi BonusPortti?</p>
+        <h2 class="display">Suoraa puhetta.<br>Reiluja tarjouksia.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-icon">🛡️</span>
+          <h3>Vain tarkistetut kasinot</h3>
+          <p>BonusPortin listalle eivät pääse ketkä tahansa. Mukana ovat vain kasinot, joiden taustat, lisenssit ja ehdot on käyty läpi.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">⚡</span>
+          <h3>Nopeat kotiutukset</h3>
+          <p>Kukaan ei halua odotella omia rahojaan päiväkausia. Siksi nostamme esiin kasinot, joilla kotiutukset hoituvat ripeästi.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🎯</span>
+          <h3>Bonukset selkeästi</h3>
+          <p>BonusPortti avaa bonusehdot selvällä suomella. Näet heti kierrätysvaatimukset, rajat ja tärkeimmät poikkeukset.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">💬</span>
+          <h3>Rehelliset arviot</h3>
+          <p>Emme kaunistele heikkouksia tai ylistä joka tarjousta. Kerromme suoraan, mikä toimii ja missä on parantamisen varaa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="opas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Opas</p>
+        <h2 class="display">Oppaat &amp; vinkit pelaajille</h2>
+        <p class="section-lead">Tuoreimmat vinkit ja rehelliset katsaukset suomalaisen kasinomaailman ytimestä.</p>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <h3>Miten valita turvallinen nettikasino</h3>
+          <p>Näin tunnistat luotettavan lisenssin ja vältät epäilyttävät operaattorit.</p>
+        </article>
+        <article class="guide-card">
+          <h3>Bonusehdot selkokielellä</h3>
+          <p>Kierrätysvaatimukset, panosrajat ja muut ehdot käytännön esimerkein.</p>
+        </article>
+        <article class="guide-card">
+          <h3>Vastuullisen pelaamisen opas</h3>
+          <p>Rajojen asettaminen, tauotus ja mistä saat tarvittaessa apua.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -129,5 +262,6 @@
   </div>
 </footer>
 
+<script src="assets/js/script.js"></script>
 </body>
 </html>
