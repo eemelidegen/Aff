@@ -3,19 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BonusPortti &mdash; Parhaat nettikasinot vertailtuna</title>
-<meta name="description" content="BonusPortti vertailee parhaita nettikasinoita bonusten, lisenssien, kotiutusnopeuden ja pelivalikoiman perusteella, jotta voit valita turvallisen kasinon luottavaisin mielin.">
+<title>BonusPortti &mdash; Suomen parhaat nettikasinot</title>
+<meta name="description" content="BonusPortti kokoaa Suomen parhaat nettikasinot yhdelle sivulle: bonukset, lisenssit ja kotiutusnopeus vertailtuna.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎰</text></svg>">
 </head>
 <body>
-
-<div class="disclosure-bar">
-  <p><strong>Vain 18+.</strong> Sivusto sisältää kumppanuuslinkkejä &mdash; saatamme saada palkkion, jos rekisteröidyt niiden kautta, sinulle ilman lisäkuluja. Pelaa vastuullisesti.</p>
-</div>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -25,239 +21,124 @@
         <text x="150" y="46" class="logo-word logo-portti" font-size="46">Portti</text>
       </svg>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Avaa valikko">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" id="siteNav">
-      <a href="#rankings">Parhaat Kasinot</a>
-      <a href="#how-we-rank">Miten Arvioimme</a>
-      <a href="#faq">UKK</a>
-      <a href="#rankings" class="btn btn-small btn-primary">Katso Listaus</a>
-    </nav>
+    <span class="age-badge">18+</span>
   </div>
 </header>
 
 <main id="top">
 
-  <section class="hero">
-    <div class="wrap hero-inner">
+  <section class="intro">
+    <div class="wrap">
       <p class="eyebrow">Päivitetty syyskuussa 2026</p>
-      <h1>Löydä nettikasino, johon voit todella luottaa.</h1>
-      <p class="hero-sub">Vertailemme lisensointia, kotiutusnopeutta, bonusehtoja ja pelivalikoimaa kymmenissä operaattoreissa &mdash; jotta sinun ei tarvitse itse tutkia pientä präntäystä.</p>
-      <div class="hero-cta">
-        <a href="#rankings" class="btn btn-primary btn-large">Katso parhaat kasinot</a>
-        <a href="#how-we-rank" class="btn btn-ghost btn-large">Miten arvioimme</a>
-      </div>
-      <ul class="hero-stats">
-        <li><strong>40+</strong><span>Arvioitua kasinoa</span></li>
-        <li><strong>5</strong><span>Arviointikriteeriä</span></li>
-        <li><strong>100%</strong><span>Riippumaton arviointi</span></li>
-      </ul>
+      <h1>Suomen parhaat nettikasinot, yhdellä sivulla.</h1>
     </div>
   </section>
 
-  <section class="rankings" id="rankings">
+  <section class="casinos">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Kuukauden parhaat kasinot</h2>
-        <p>Listattu toimitustiimimme arviointikriteerien perusteella. Esimerkkilistaus havainnollistamista varten &mdash; vaihda tilalle omat arvioidut operaattorisi ja kumppanuuslinkkisi.</p>
-      </div>
+      <div class="casino-grid">
 
-      <ol class="casino-list">
-
-        <li class="casino-card featured">
-          <span class="rank-badge">#1</span>
-          <div class="casino-brand">
-            <div class="casino-logo" style="background:#7c5cff">RS</div>
+        <article class="casino-card featured">
+          <span class="rank" aria-hidden="true">01</span>
+          <span class="badge">Suosituin</span>
+          <div class="casino-id">
+            <div class="mark" style="--tile:#5b6bff">RS</div>
             <div>
-              <h3>Royal Spin Casino</h3>
-              <div class="stars" aria-label="4,9 tähteä viidestä">★★★★★</div>
+              <h2>Royal Spin Casino</h2>
+              <div class="stars" aria-label="4,9/5">★★★★★</div>
             </div>
           </div>
-          <div class="casino-bonus">
-            <span class="bonus-label">Tervetuliaisbonus</span>
-            <span class="bonus-value">100% aina 1000 € asti + 200 ilmaiskierrosta</span>
-          </div>
-          <ul class="casino-tags">
-            <li>Lisensoitu ja säännelty</li>
+          <p class="bonus">100&nbsp;% aina 1&nbsp;000&nbsp;€ asti <span>+ 200 ilmaiskierrosta</span></p>
+          <ul class="tags">
+            <li>Lisensoitu</li>
             <li>Nopeat kotiutukset</li>
-            <li>Yli 2 000 peliä</li>
           </ul>
-          <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </li>
+          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
+        </article>
 
-        <li class="casino-card">
-          <span class="rank-badge">#2</span>
-          <div class="casino-brand">
-            <div class="casino-logo" style="background:#00b894">LV</div>
+        <article class="casino-card">
+          <span class="rank" aria-hidden="true">02</span>
+          <div class="casino-id">
+            <div class="mark" style="--tile:#12b886">LV</div>
             <div>
-              <h3>Lucky Vault</h3>
-              <div class="stars" aria-label="4,7 tähteä viidestä">★★★★★</div>
+              <h2>Lucky Vault</h2>
+              <div class="stars" aria-label="4,7/5">★★★★★</div>
             </div>
           </div>
-          <div class="casino-bonus">
-            <span class="bonus-label">Tervetuliaisbonus</span>
-            <span class="bonus-value">150% aina 750 € asti</span>
-          </div>
-          <ul class="casino-tags">
-            <li>Asiakaspalvelu 24/7</li>
-            <li>Kryptoystävällinen</li>
+          <p class="bonus">150&nbsp;% aina 750&nbsp;€ asti</p>
+          <ul class="tags">
             <li>Live-pöydät</li>
+            <li>Kryptoystävällinen</li>
           </ul>
-          <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </li>
+          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
+        </article>
 
-        <li class="casino-card">
-          <span class="rank-badge">#3</span>
-          <div class="casino-brand">
-            <div class="casino-logo" style="background:#e17055">GR</div>
+        <article class="casino-card">
+          <span class="rank" aria-hidden="true">03</span>
+          <div class="casino-id">
+            <div class="mark" style="--tile:#e8734a">GR</div>
             <div>
-              <h3>Golden Reel</h3>
-              <div class="stars" aria-label="4,6 tähteä viidestä">★★★★★</div>
+              <h2>Golden Reel</h2>
+              <div class="stars" aria-label="4,6/5">★★★★★</div>
             </div>
           </div>
-          <div class="casino-bonus">
-            <span class="bonus-label">Tervetuliaisbonus</span>
-            <span class="bonus-value">25 € talletusvapaa + 100% aina 500 € asti</span>
-          </div>
-          <ul class="casino-tags">
+          <p class="bonus">25&nbsp;€ talletusvapaa <span>+ 100&nbsp;% / 500&nbsp;€</span></p>
+          <ul class="tags">
             <li>Talletusvapaa bonus</li>
             <li>Mobiilioptimoitu</li>
-            <li>Viikoittaiset kampanjat</li>
           </ul>
-          <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </li>
+          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
+        </article>
 
-        <li class="casino-card">
-          <span class="rank-badge">#4</span>
-          <div class="casino-brand">
-            <div class="casino-logo" style="background:#0984e3">NC</div>
+        <article class="casino-card">
+          <span class="rank" aria-hidden="true">04</span>
+          <div class="casino-id">
+            <div class="mark" style="--tile:#2f8fe0">NC</div>
             <div>
-              <h3>Nova Casino</h3>
-              <div class="stars" aria-label="4,5 tähteä viidestä">★★★★½</div>
+              <h2>Nova Casino</h2>
+              <div class="stars" aria-label="4,5/5">★★★★½</div>
             </div>
           </div>
-          <div class="casino-bonus">
-            <span class="bonus-label">Tervetuliaisbonus</span>
-            <span class="bonus-value">100% aina 300 € asti + 50 ilmaiskierrosta</span>
-          </div>
-          <ul class="casino-tags">
+          <p class="bonus">100&nbsp;% aina 300&nbsp;€ asti <span>+ 50 kierrosta</span></p>
+          <ul class="tags">
             <li>Nopea tunnistautuminen</li>
-            <li>Painottuu kolikkopeleihin</li>
             <li>VIP-ohjelma</li>
           </ul>
-          <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </li>
+          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
+        </article>
 
-        <li class="casino-card">
-          <span class="rank-badge">#5</span>
-          <div class="casino-brand">
-            <div class="casino-logo" style="background:#fdcb6e;color:#1a1330">DS</div>
+        <article class="casino-card">
+          <span class="rank" aria-hidden="true">05</span>
+          <div class="casino-id">
+            <div class="mark" style="--tile:#d4a72c">DS</div>
             <div>
-              <h3>Diamond Strike</h3>
-              <div class="stars" aria-label="4,4 tähteä viidestä">★★★★½</div>
+              <h2>Diamond Strike</h2>
+              <div class="stars" aria-label="4,4/5">★★★★½</div>
             </div>
           </div>
-          <div class="casino-bonus">
-            <span class="bonus-label">Tervetuliaisbonus</span>
-            <span class="bonus-value">50% aina 2 000 € asti</span>
-          </div>
-          <ul class="casino-tags">
-            <li>Sopii suurpelaajille</li>
+          <p class="bonus">50&nbsp;% aina 2&nbsp;000&nbsp;€ asti</p>
+          <ul class="tags">
+            <li>Suurpelaajille</li>
             <li>Pöytäpelit</li>
-            <li>Nopeat kotiutukset</li>
           </ul>
-          <a href="#" class="btn btn-primary" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
-        </li>
+          <a href="#" class="cta" rel="sponsored nofollow noopener" target="_blank">Lunasta bonus</a>
+        </article>
 
-      </ol>
-    </div>
-  </section>
-
-  <section class="how-we-rank" id="how-we-rank">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Miten arvioimme kasinot</h2>
-        <p>Jokainen operaattori pisteytetään samojen viiden kriteerin perusteella ennen kuin se pääsee listallemme.</p>
       </div>
-      <div class="criteria-grid">
-        <div class="criteria-card">
-          <span class="criteria-icon" aria-hidden="true">🛡️</span>
-          <h3>Lisenssi ja turvallisuus</h3>
-          <p>Tarkistamme voimassa olevat pelilisenssit, riippumattoman auditoinnin ja salausstandardit ennen mitään muuta.</p>
-        </div>
-        <div class="criteria-card">
-          <span class="criteria-icon" aria-hidden="true">💰</span>
-          <h3>Bonuksen arvo</h3>
-          <p>Luemme kierrätysvaatimukset ja ehdot jokaisen bonuksen takana &mdash; emme pelkkää otsikkolukua.</p>
-        </div>
-        <div class="criteria-card">
-          <span class="criteria-icon" aria-hidden="true">⚡</span>
-          <h3>Kotiutusnopeus</h3>
-          <p>Nostoaikoja testataan ja vertaillaan eri maksutavoilla, ei pelkkien markkinointiväitteiden perusteella.</p>
-        </div>
-        <div class="criteria-card">
-          <span class="criteria-icon" aria-hidden="true">🎮</span>
-          <h3>Pelivalikoima</h3>
-          <p>Kolikkopelejä, live-pelejä, pöytäpelejä ja pelinvalmistajia punnitaan laajuuden ja laadun mukaan.</p>
-        </div>
-        <div class="criteria-card">
-          <span class="criteria-icon" aria-hidden="true">📱</span>
-          <h3>Mobiilikokemus</h3>
-          <p>Jokainen sivusto testataan mobiilissa latausnopeuden, ulkoasun ja ominaisuuksien osalta verrattuna työpöytäversioon.</p>
-        </div>
-        <div class="criteria-card">
-          <span class="criteria-icon" aria-hidden="true">☎️</span>
-          <h3>Asiakaspalvelu</h3>
-          <p>Otamme suoraan yhteyttä asiakaspalveluun arvioidaksemme vastausaikaa ja laatua ennen arvion julkaisua.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq" id="faq">
-    <div class="wrap wrap-narrow">
-      <div class="section-head">
-        <h2>Usein kysytyt kysymykset</h2>
-      </div>
-      <details class="faq-item">
-        <summary>Onko nettikasinoilla pelaaminen laillista Suomessa?</summary>
-        <p>Suomen rahapelimarkkina avautui vuonna 2026 lisensoiduille toimijoille. Varmista aina, että kasinolla on voimassa oleva lisenssi, ja tutustu ajankohtaisiin sääntöihin ennen rekisteröitymistä.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Miten BonusPortti tienaa rahaa?</summary>
-        <p>Saatamme saada palkkion, kun rekisteröidyt sivustolla olevien linkkien kautta. Tämä ei koskaan vaikuta arvosteluihimme &mdash; kasinot eivät voi ostaa parempaa sijoitusta listalla.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Ovatko tervetuliaisbonukset oikeasti ilmaista rahaa?</summary>
-        <p>Bonuksiin liittyy lähes aina kierrätysvaatimuksia ja muita ehtoja. Lue aina koko sopimusehdot operaattorin omalta sivustolta ennen bonuksen käyttöönottoa.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Entä jos epäilen, että minulla on peliongelma?</summary>
-        <p>Lopeta pelaaminen ja ota yhteyttä paikalliseen peliriippuvuuden tukipalveluun, kuten Peluuriin. Useimmat lisensoidut kasinot tarjoavat myös pelikiellon ja talletusrajojen asettamisen.</p>
-      </details>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <svg class="logo-svg" viewBox="0 0 360 60" role="img" aria-label="BonusPortti">
-        <text x="0" y="46" class="logo-word logo-bonus" font-size="46">Bonus</text>
-        <text x="150" y="46" class="logo-word logo-portti" font-size="46">Portti</text>
-      </svg>
-      <p>Riippumattomia nettikasinoarvosteluja ja -vertailuja.</p>
-    </div>
-    <div class="footer-notice">
-      <p><strong>Pelaa vastuullisesti.</strong> Rahapelaamisen tulisi olla viihdettä, ei tapa ansaita rahaa tai paeta ongelmia. Pelaa vain rahalla, jonka voit hävitä, aseta itsellesi rajat ennen pelaamisen aloittamista, äläkä koskaan yritä voittaa hävittyjä rahoja takaisin. Jos pelaaminen lakkaa olemasta hauskaa, lopeta pelaaminen ja ota tarvittaessa yhteyttä Peluuriin tai muuhun peliongelmien tukipalveluun.</p>
-      <p class="fine-print">BonusPortti on riippumaton kumppanuussivusto. Emme ole kasino-operaattori emmekä vastaanota panoksia. Listaukset perustuvat omaan toimitukselliseen arviointikriteeristöömme. Tarkista lisenssi- ja sopimusehdot aina suoraan operaattorilta ennen rekisteröitymistä. Sivusto on tarkoitettu viihde- ja tiedotuskäyttöön.</p>
-    </div>
-    <p class="copyright">&copy; 2026 BonusPortti. Kaikki oikeudet pidätetään.</p>
+  <div class="wrap">
+    <svg class="logo-svg footer-logo" viewBox="0 0 360 60" role="img" aria-label="BonusPortti">
+      <text x="0" y="46" class="logo-word logo-bonus" font-size="46">Bonus</text>
+      <text x="150" y="46" class="logo-word logo-portti" font-size="46">Portti</text>
+    </svg>
+    <p class="legal">18+. Kumppanuuslinkkejä &mdash; pelaa vastuullisesti. &copy; 2026 BonusPortti.</p>
   </div>
 </footer>
 
-<script src="assets/js/script.js"></script>
 </body>
 </html>
