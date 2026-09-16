@@ -1,21 +1,23 @@
-# SpinRank
+# Anu Edman — Parturi-kampaamo &amp; Peruukkipalvelu
 
-A static casino affiliate landing page: a hero section, a ranked list of casinos with bonus details and CTA buttons, a "how we rank" criteria grid, an FAQ, and a footer with responsible-gambling and affiliate disclosures.
+Moderni yksisivuinen verkkosivu Porin keskustassa sijaitsevalle parturi-kampaamolle ja peruukkipalvelulle. Sisältää hero-osion, palvelut, peruukkipalvelun oman esittelyn, esittelytekstin yrittäjästä sekä sijainti- ja ajanvaraustiedot karttoineen.
 
-## Structure
+## Rakenne
 
-- `index.html` — page markup
-- `assets/css/style.css` — styles
-- `assets/js/script.js` — mobile nav toggle
+- `index.html` — sivun sisältö
+- `assets/css/style.css` — tyylit
+- `assets/js/script.js` — mobiilivalikon avaus/sulkeminen
 
-## Customizing
+## Muokattavaa ennen julkaisua
 
-- Casino entries live in the `<ol class="casino-list">` block in `index.html`. Each `<li class="casino-card">` is one listing — swap in real operator names, logos, bonus copy, and affiliate URLs (replace the `href="#"` on each "Claim Bonus" button).
-- Colors and spacing are defined as CSS custom properties at the top of `style.css`.
+- **Tarkka katuosoite**: sivulla lukee toistaiseksi vain "Katariinankatu, Pori" — lisää talon numero sekä `index.html`:n osoitetekstiin että Google Maps -upotuksen `src`-arvoon (`assets/... iframe`).
+- **Somelinkit**: Facebook- ja Instagram-linkit (`#`) osiossa "Seuraa somessa" pitää vaihtaa oikeisiin profiileihin.
+- **Valokuvat**: sivu on tehty tällä hetkellä kuvattomana, tyylitellyillä väreillä ja ikoneilla, koska käytössä ei ollut julkaisukelpoisia valokuvia. Oikeat kuvat liikkeestä ja tekijästä kannattaa lisätä hero- ja "Minusta"-osioihin.
+- Puhelinnumero (044 7506 505) ja maksutavat on poimittu nykyiseltä sivulta — tarkista, että tiedot ovat yhä ajan tasalla.
 
-## Running locally
+## Ajaminen paikallisesti
 
-Just open `index.html` in a browser, or serve the folder:
+Avaa `index.html` selaimessa, tai tarjoile kansio:
 
 ```
 python3 -m http.server 8000
