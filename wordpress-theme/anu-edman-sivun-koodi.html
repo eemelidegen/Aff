@@ -1,0 +1,461 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600;700&display=swap');
+:root {
+  --bg: #faf6f2;
+  --surface: #ffffff;
+  --border: #e9e0d8;
+  --text: #2b2420;
+  --text-muted: #6b6058;
+  --accent: #b5654a;
+  --accent-dark: #914c37;
+  --accent-soft: #f2e2d9;
+  --gold: #a98a4d;
+  --radius: 18px;
+  --max-width: 1160px;
+  --shadow: 0 20px 45px -25px rgba(43, 36, 32, 0.35);
+}
+.ae-page * { box-sizing: border-box; }
+.ae-page {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Jost', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.ae-page h1, .ae-page h2, .ae-page h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.15;
+  color: var(--text);
+}
+.ae-page p { margin: 0 0 1em; color: var(--text-muted); }
+.ae-page p:last-child { margin-bottom: 0; }
+.ae-page a { color: inherit; text-decoration: none; }
+.ae-page img, .ae-page svg { display: block; max-width: 100%; }
+.ae-page .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.ae-page .skip-link { position: absolute; left: -999px; top: 0; background: var(--accent); color: #fff; padding: 10px 16px; z-index: 100; }
+.ae-page .skip-link:focus { left: 12px; top: 12px; }
+.ae-page .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; font-weight: 600; color: var(--accent); margin: 0 0 .5em; }
+.ae-page .display { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+.ae-page .section-head { max-width: 640px; margin: 0 auto 3rem; text-align: center; }
+.ae-page .muted { color: var(--text-muted); font-size: .95rem; }
+.ae-page .btn { display: inline-flex; align-items: center; gap: .5em; padding: .85em 1.6em; border-radius: 999px; font-weight: 600; font-size: .95rem; border: 1px solid transparent; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; white-space: nowrap; }
+.ae-page .btn .icon { width: 18px; height: 18px; fill: currentColor; }
+.ae-page .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+.ae-page .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.ae-page .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+.ae-page .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.ae-page .btn-large { padding: 1em 1.9em; font-size: 1rem; }
+.ae-page .site-header { position: sticky; top: 0; z-index: 50; background: rgba(250, 246, 242, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.ae-page .header-inner { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; }
+.ae-page .logo { display: flex; flex-direction: column; line-height: 1.1; }
+.ae-page .logo-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; font-weight: 600; font-style: italic; color: var(--text); }
+.ae-page .logo-sub { font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); }
+.ae-page .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: none; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; }
+.ae-page .nav-toggle span { display: block; height: 2px; margin: 0 8px; background: var(--text); }
+.ae-page .site-nav { display: flex; align-items: center; gap: 2rem; }
+.ae-page .site-nav a:not(.btn) { font-size: .95rem; font-weight: 500; color: var(--text); position: relative; }
+.ae-page .site-nav a:not(.btn):hover { color: var(--accent); }
+.ae-page .btn-nav { padding: .6em 1.3em; font-size: .85rem; }
+.ae-page .hero { position: relative; overflow: hidden; padding: 5rem 0 4rem; }
+.ae-page .hero-bg { position: absolute; inset: 0; z-index: 0; }
+.ae-page .hero-swoop { width: 100%; height: 100%; }
+.ae-page .hero-swoop path { fill: var(--accent-soft); }
+.ae-page .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.3fr .9fr; gap: 3rem; align-items: start; }
+.ae-page .hero-copy h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); margin-bottom: .4em; }
+.ae-page .hero-copy .script { color: var(--accent); font-style: italic; }
+.ae-page .hero-sub { font-size: 1.1rem; max-width: 46ch; margin-bottom: 1.6em; }
+.ae-page .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.ae-page .hero-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 1.3rem; }
+.ae-page .hero-card-row { display: flex; gap: .9rem; align-items: flex-start; }
+.ae-page .hero-card-icon { font-size: 1.3rem; line-height: 1; }
+.ae-page .hero-card-row strong { display: block; font-size: .95rem; margin-bottom: .2em; }
+.ae-page .hero-card-row p { font-size: .9rem; margin: 0; }
+.ae-page .services { padding: 5rem 0; }
+.ae-page .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.ae-page .service-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; text-align: left; transition: transform .15s ease, box-shadow .15s ease; }
+.ae-page .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.ae-page .service-icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-dark); margin-bottom: 1rem; }
+.ae-page .service-icon svg { width: 24px; height: 24px; }
+.ae-page .service-card h3 { font-size: 1.25rem; margin-bottom: .3em; }
+.ae-page .service-card p { font-size: .92rem; margin: 0; }
+.ae-page .wigs { padding: 5rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.ae-page .wigs-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: center; }
+.ae-page .wigs-list { list-style: none; margin: 0 0 1.6em; padding: 0; display: grid; gap: .6em; }
+.ae-page .wigs-list li { padding-left: 1.6em; position: relative; color: var(--text); font-size: .97rem; }
+.ae-page .wigs-list li::before { content: ""; position: absolute; left: 0; top: .5em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.ae-page .wigs-visual { display: flex; justify-content: center; }
+.ae-page .wigs-illustration { width: 100%; max-width: 280px; }
+.ae-page .ring-outer { fill: none; stroke: var(--accent-soft); stroke-width: 2; }
+.ae-page .ring-inner { fill: var(--bg); stroke: var(--border); stroke-width: 1; }
+.ae-page .wig-shape { fill: var(--accent); opacity: .85; }
+.ae-page .pricing { padding: 5rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.ae-page .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.ae-page .price-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; }
+.ae-page .price-card h3 { font-size: 1.2rem; margin-bottom: .8em; }
+.ae-page .price-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .55em; }
+.ae-page .price-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; font-size: .92rem; color: var(--text); }
+.ae-page .price-list li span:first-child { color: var(--text-muted); }
+.ae-page .price-list li span:last-child { font-weight: 600; white-space: nowrap; }
+.ae-page .price-list em { font-weight: 500; font-style: normal; color: var(--text-muted); font-size: .85em; }
+.ae-page .price-note { font-size: .82rem; color: var(--text-muted); margin-top: .9em; margin-bottom: 0; }
+.ae-page .price-terms { text-align: center; font-size: .88rem; color: var(--text-muted); max-width: 640px; margin: 0 auto; }
+.ae-page .about { padding: 5rem 0; }
+.ae-page .about-inner { display: grid; grid-template-columns: .5fr 1fr; gap: 3rem; align-items: center; }
+.ae-page .about-portrait { width: 100%; aspect-ratio: 1; border-radius: 50%; background: linear-gradient(160deg, var(--accent-soft), var(--accent)); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow); }
+.ae-page .about-portrait span { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(2.5rem, 6vw, 4rem); color: #fff; }
+.ae-page .about-copy h2 { margin-bottom: .4em; }
+.ae-page .info { padding: 5rem 0 6rem; }
+.ae-page .info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+.ae-page .info-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; }
+.ae-page .info-card h3 { font-size: 1.1rem; margin-bottom: .5em; }
+.ae-page .info-card p { font-size: .92rem; margin: 0 0 .5em; }
+.ae-page .info-card p:last-child { margin-bottom: 0; }
+.ae-page .info-card a { color: var(--accent-dark); font-weight: 600; }
+.ae-page .social-links { display: flex; gap: 1rem; }
+.ae-page .social-links a { display: flex; align-items: center; gap: .5em; font-size: .88rem; font-weight: 500; color: var(--text); }
+.ae-page .social-links svg { width: 20px; height: 20px; color: var(--accent-dark); }
+.ae-page .social-links a:hover { color: var(--accent-dark); }
+.ae-page .map-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.ae-page .map-wrap iframe { width: 100%; height: 380px; border: 0; }
+.ae-page .site-footer { background: var(--text); color: #f2ece5; padding: 3rem 0; }
+.ae-page .footer-inner { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; }
+.ae-page .footer-logo { color: #fff; }
+.ae-page .site-footer .logo-sub { color: #cbbfb2; }
+.ae-page .footer-nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.ae-page .footer-nav a { font-size: .9rem; color: #e6ddd3; }
+.ae-page .footer-nav a:hover { color: #fff; }
+.ae-page .legal { font-size: .82rem; color: #cbbfb2; width: 100%; margin-top: 1rem; }
+.ae-page .legal a { color: #f2ece5; text-decoration: underline; }
+.ae-page .mobile-call { display: none; position: fixed; bottom: 18px; right: 18px; z-index: 60; background: var(--accent); color: #fff; padding: .9em 1.3em; border-radius: 999px; align-items: center; gap: .5em; font-weight: 600; box-shadow: var(--shadow); }
+.ae-page .mobile-call .icon { width: 18px; height: 18px; fill: currentColor; }
+@media (max-width: 900px) {
+  .ae-page .hero-inner { grid-template-columns: 1fr; }
+  .ae-page .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .ae-page .wigs-inner { grid-template-columns: 1fr; }
+  .ae-page .wigs-visual { order: -1; max-width: 220px; margin: 0 auto; }
+  .ae-page .about-inner { grid-template-columns: 1fr; text-align: center; }
+  .ae-page .about-portrait { max-width: 200px; margin: 0 auto; }
+  .ae-page .info-grid { grid-template-columns: repeat(2, 1fr); }
+  .ae-page .price-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .ae-page .nav-toggle { display: flex; }
+  .ae-page .site-nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--border); flex-direction: column; align-items: stretch; gap: 0; padding: .5rem 24px 1rem; display: none; }
+  .ae-page .site-nav.open { display: flex; }
+  .ae-page .site-nav a:not(.btn) { padding: .8rem 0; border-bottom: 1px solid var(--border); }
+  .ae-page .site-nav .btn-nav { margin-top: .8rem; justify-content: center; }
+  .ae-page .services-grid { grid-template-columns: 1fr; }
+  .ae-page .info-grid { grid-template-columns: 1fr; }
+  .ae-page .price-grid { grid-template-columns: 1fr; }
+  .ae-page .price-list li { flex-direction: column; gap: .1em; }
+  .ae-page .mobile-call { display: flex; }
+}
+</style>
+
+<div class="ae-page">
+
+<a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="Anu Edman, etusivu">
+      <span class="logo-name">Anu Edman</span>
+      <span class="logo-sub">Parturi-kampaamo &amp; Peruukkipalvelu</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Avaa valikko">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#palvelut">Palvelut</a>
+      <a href="#peruukit">Peruukkipalvelu</a>
+      <a href="#hinnasto">Hinnasto</a>
+      <a href="#minusta">Minusta</a>
+      <a href="#sijainti">Sijainti &amp; ajanvaraus</a>
+      <a href="tel:+358447506505" class="btn btn-primary btn-nav">Soita 044 7506 505</a>
+    </nav>
+  </div>
+</header>
+
+<main id="sisalto">
+
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 800" class="hero-swoop" aria-hidden="true">
+        <path d="M -50,420 C 150,300 250,560 450,460 C 650,360 700,520 850,440 L 850,850 L -50,850 Z" />
+      </svg>
+    </div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Pori &middot; Katariinankatu 9, keskusta</p>
+        <h1>Ammattitaitoa ja lämpöä <span class="script">yli 20 vuoden</span> kokemuksella</h1>
+        <p class="hero-sub">Autan sinua kaikissa hiustenhoitoon liittyvissä asioissa &ndash; ja viime vuosina olen erikoistunut myös peruukkipalveluun.</p>
+        <div class="hero-actions">
+          <a href="tel:+358447506505" class="btn btn-primary btn-large">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+            Varaa aika &ndash; 044 7506 505
+          </a>
+          <a href="#sijainti" class="btn btn-ghost btn-large">Katso sijainti</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Yhteystiedot lyhyesti">
+        <div class="hero-card-row">
+          <span class="hero-card-icon" aria-hidden="true">📍</span>
+          <div>
+            <strong>Käyntiosoite</strong>
+            <p>Katariinankatu 9, 28100 Pori &ndash; ilmaiset pysäköintitilat lähellä</p>
+          </div>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-icon" aria-hidden="true">🕘</span>
+          <div>
+            <strong>Aukiolo</strong>
+            <p>Ajanvarauksen mukaan</p>
+          </div>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-icon" aria-hidden="true">🚗</span>
+          <div>
+            <strong>Kotikäynnit</strong>
+            <p>Lähialueelle tarvittaessa, sopimuksen mukaan</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="services" id="palvelut">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Palvelut</p>
+        <h2 class="display">Kaikki hiustenhoidon tarpeesi yhdeltä ammattilaiselta</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3l6 18M6 21l12-9M6 21L18 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Leikkaus &amp; muotoilu</h3>
+          <p>Persoonallinen hiusleikkaus ja muotoilu, joka istuu arkeen ja juhlaan.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="1.2" opacity=".5"/></svg>
+          </span>
+          <h3>Värjäys &amp; raidoitus</h3>
+          <p>Värit ja vaaleennukset ammattitaidolla, hiusten kunto huomioiden.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20c0-6 4-11 8-11s8 5 8 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <h3>Peruukkipalvelu</h3>
+          <p>Sovitus, muotoilu ja huolto &ndash; katso lisää alta.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 12l4-8h10l4 8-9 9-9-9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Kotikäynnit</h3>
+          <p>Palvelu tuodaan tarvittaessa kotiisi lähialueella, sopimuksen mukaan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wigs" id="peruukit">
+    <div class="wrap wigs-inner">
+      <div class="wigs-copy">
+        <p class="eyebrow">Erikoisosaaminen</p>
+        <h2 class="display">Peruukkipalvelu ammattitaidolla ja hienotunteisuudella</h2>
+        <p>Viime vuosina olen erikoistunut peruukkipalveluun ja autan mielelläni oikean peruukin valinnassa, sovituksessa sekä sen muotoilussa ja huollossa arjen käyttöön. Palvelu hoidetaan aina rauhassa ja yksilöllisesti.</p>
+        <ul class="wigs-list">
+          <li>Henkilökohtainen sovitus ja koon säätö</li>
+          <li>Leikkaus ja muotoilu omaan tyyliin sopivaksi</li>
+          <li>Huolto- ja pesuneuvonta</li>
+          <li>Mahdollisuus kotikäynteihin tarvittaessa</li>
+        </ul>
+        <a href="tel:+358447506505" class="btn btn-primary">Kysy lisää &ndash; 044 7506 505</a>
+      </div>
+      <div class="wigs-visual" aria-hidden="true">
+        <svg viewBox="0 0 320 320" class="wigs-illustration">
+          <circle cx="160" cy="160" r="150" class="ring-outer"/>
+          <circle cx="160" cy="160" r="118" class="ring-inner"/>
+          <path d="M100 150c0-45 27-80 60-80s60 35 60 80c0 15-4 26-9 38-6-10-10-14-18-14-10 0-14 10-22 10s-12-10-22-10-13 4-19 14c-6-12-10-24-10-38z" class="wig-shape"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="hinnasto">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hinnasto</p>
+        <h2 class="display">Hinnat</h2>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Leikkaukset</h3>
+          <ul class="price-list">
+            <li><span>30 min</span><span>30 &euro;</span></li>
+            <li><span>45 min</span><span>35 &euro;</span></li>
+            <li><span>60 min (esim. mallinmuutos)</span><span>42 &euro;</span></li>
+            <li><span>Koneajelu / otsatukka (max 10 min)</span><span>15 &euro;</span></li>
+          </ul>
+          <p class="price-note">Edellä mainitut leikkaukset sisältävät föönauksen.</p>
+        </div>
+        <div class="price-card">
+          <h3>Värjäykset ja raidat</h3>
+          <ul class="price-list">
+            <li><span>Lyhyet</span><span>69 &euro; <em>/ monisävyvärjäys 75 &euro;</em></span></li>
+            <li><span>Puolipitkät</span><span>79 &euro; <em>/ monisävyvärjäys 85 &euro;</em></span></li>
+            <li><span>Pitkät</span><span>89 &euro; <em>/ monisävyvärjäys 95 &euro;</em></span></li>
+            <li><span>Raidat</span><span>69 &euro;/tunti</span></li>
+          </ul>
+          <p class="price-note">Värjäykset sisältävät kuivauksen.</p>
+        </div>
+        <div class="price-card">
+          <h3>Kampaukset</h3>
+          <ul class="price-list">
+            <li><span>Pesu ja föönaus (max 30 min)</span><span>30 &euro;</span></li>
+            <li><span>Pesu ja rullakampaus</span><span>36 &euro;</span></li>
+            <li><span>Kampaukset tuntiveloituksella</span><span>70 &euro;/tunti</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Kiharat</h3>
+          <ul class="price-list">
+            <li><span>Lyhyet</span><span>69 &euro;</span></li>
+            <li><span>Puolipitkät</span><span>79 &euro;</span></li>
+            <li><span>Erikoispuolaukset</span><span>75 &euro;/tunti</span></li>
+            <li><span>Osapermanentti (max 15 rll)</span><span>50 &euro;</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Kulmat ja ripset</h3>
+          <ul class="price-list">
+            <li><span>Kulmien väri tai muotoilu</span><span>15 &euro;</span></li>
+            <li><span>Kulmien väri ja muotoilu</span><span>23 &euro;</span></li>
+            <li><span>Ripsien värjäys</span><span>20 &euro;</span></li>
+            <li><span>Kulmat ja ripset</span><span>30 &euro;</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Erikoistyöt</h3>
+          <ul class="price-list">
+            <li><span>Tehohoito (hoito, hieronta, föönaus)</span><span>42 &euro;</span></li>
+            <li><span>Erikoistyöt (esim. pidennykset)</span><span>75 &euro;/tunti</span></li>
+            <li><span>Peruukin huolto tai leikkaus</span><span>25 &euro;</span></li>
+            <li><span>Peruukkipalvelut</span><span>75 &euro;/tunti</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="price-terms">Kaikki palvelut sisältävät 25,5&nbsp;% arvonlisäveron. Peruuttamattomista ajoista veloitetaan 50&nbsp;% palvelun hinnasta.</p>
+    </div>
+  </section>
+
+  <section class="about" id="minusta">
+    <div class="wrap about-inner">
+      <div class="about-portrait" aria-hidden="true">
+        <span>AE</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Minusta</p>
+        <h2 class="display">Anu Edman</h2>
+        <p>Olen toiminut parturi-kampaajana yli 20 vuotta ja autan sinua ammattitaidolla ja palvelulla kaikissa hiustenhoitoon liittyvissä asioissa. Viime vuosina olen erikoistunut peruukkipalveluun ja panostan siihen, että jokainen asiakas saa yksilöllistä ja lämmintä palvelua.</p>
+        <p>Liikkeeni sijaitsee aivan Porin keskustassa, katutasossa Katariinankadulla &ndash; alueella on myös ilmaiset pysäköintitilat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="sijainti">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Sijainti &amp; ajanvaraus</p>
+        <h2 class="display">Helppo tulla, keskellä Poria</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Käyntiosoite</h3>
+          <p>Katariinankatu 9<br>28100 Pori</p>
+          <p class="muted">Ilmaiset pysäköintitilat alueella.</p>
+        </div>
+        <div class="info-card">
+          <h3>Ajanvaraus</h3>
+          <p><a href="tel:+358447506505">044 7506 505</a></p>
+          <p class="muted">Avoinna sopimuksen mukaan, myös iltaisin ja lauantaisin. Kotikäynnit lähialueella tarvittaessa.</p>
+        </div>
+        <div class="info-card">
+          <h3>Maksutavat</h3>
+          <p class="muted">Käteinen, Debit-pankkikortti, Visa, Mastercard ja Visa Electron.</p>
+        </div>
+        <div class="info-card">
+          <h3>Seuraa somessa</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1E2iVmqCjQ/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7C15.9 3.6 15 3.5 14 3.5c-2.5 0-4.2 1.5-4.2 4.3v2.1H7v3.1h2.8V21h3.7z" fill="currentColor"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          title="Anu Edman, Katariinankatu 9, Pori &ndash; kartta"
+          src="https://www.google.com/maps?q=Katariinankatu+9,+28100+Pori&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="logo-name footer-logo">Anu Edman</span>
+      <span class="logo-sub">Parturi-kampaamo &amp; Peruukkipalvelu</span>
+    </div>
+    <nav class="footer-nav" aria-label="Alatunnisteen valikko">
+      <a href="#palvelut">Palvelut</a>
+      <a href="#peruukit">Peruukkipalvelu</a>
+      <a href="#hinnasto">Hinnasto</a>
+      <a href="#minusta">Minusta</a>
+      <a href="#sijainti">Sijainti &amp; ajanvaraus</a>
+    </nav>
+    <p class="legal">&copy; 2026 Anu Edman. Katariinankatu 9, 28100 Pori &middot; <a href="tel:+358447506505">044 7506 505</a></p>
+  </div>
+</footer>
+
+<a href="tel:+358447506505" class="mobile-call" aria-label="Soita ja varaa aika">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+  Soita
+</a>
+
+</div>
+
+<script>
+(function () {
+  var navToggle = document.getElementById('navToggle');
+  var siteNav = document.getElementById('siteNav');
+  if (navToggle && siteNav) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = siteNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    siteNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        siteNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+})();
+</script>
