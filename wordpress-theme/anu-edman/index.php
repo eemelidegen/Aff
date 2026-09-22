@@ -1,0 +1,238 @@
+<?php get_header(); ?>
+
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 800" class="hero-swoop" aria-hidden="true">
+        <path d="M -50,420 C 150,300 250,560 450,460 C 650,360 700,520 850,440 L 850,850 L -50,850 Z" />
+      </svg>
+    </div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Pori &middot; Katariinankatu 9, keskusta</p>
+        <h1>Ammattitaitoa ja lämpöä <span class="script">yli 20 vuoden</span> kokemuksella</h1>
+        <p class="hero-sub">Autan sinua kaikissa hiustenhoitoon liittyvissä asioissa &ndash; ja viime vuosina olen erikoistunut myös peruukkipalveluun.</p>
+        <div class="hero-actions">
+          <a href="tel:+358447506505" class="btn btn-primary btn-large">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+            Varaa aika &ndash; 044 7506 505
+          </a>
+          <a href="#sijainti" class="btn btn-ghost btn-large">Katso sijainti</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Yhteystiedot lyhyesti">
+        <div class="hero-card-row">
+          <span class="hero-card-icon" aria-hidden="true">📍</span>
+          <div>
+            <strong>Käyntiosoite</strong>
+            <p>Katariinankatu 9, 28100 Pori &ndash; ilmaiset pysäköintitilat lähellä</p>
+          </div>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-icon" aria-hidden="true">🕘</span>
+          <div>
+            <strong>Aukiolo</strong>
+            <p>Ajanvarauksen mukaan</p>
+          </div>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-icon" aria-hidden="true">🚗</span>
+          <div>
+            <strong>Kotikäynnit</strong>
+            <p>Lähialueelle tarvittaessa, sopimuksen mukaan</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="services" id="palvelut">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Palvelut</p>
+        <h2 class="display">Kaikki hiustenhoidon tarpeesi yhdeltä ammattilaiselta</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3l6 18M6 21l12-9M6 21L18 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Leikkaus &amp; muotoilu</h3>
+          <p>Persoonallinen hiusleikkaus ja muotoilu, joka istuu arkeen ja juhlaan.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="1.2" opacity=".5"/></svg>
+          </span>
+          <h3>Värjäys &amp; raidoitus</h3>
+          <p>Värit ja vaaleennukset ammattitaidolla, hiusten kunto huomioiden.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20c0-6 4-11 8-11s8 5 8 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <h3>Peruukkipalvelu</h3>
+          <p>Sovitus, muotoilu ja huolto &ndash; katso lisää alta.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 12l4-8h10l4 8-9 9-9-9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Kotikäynnit</h3>
+          <p>Palvelu tuodaan tarvittaessa kotiisi lähialueella, sopimuksen mukaan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wigs" id="peruukit">
+    <div class="wrap wigs-inner">
+      <div class="wigs-copy">
+        <p class="eyebrow">Erikoisosaaminen</p>
+        <h2 class="display">Peruukkipalvelu ammattitaidolla ja hienotunteisuudella</h2>
+        <p>Viime vuosina olen erikoistunut peruukkipalveluun ja autan mielelläni oikean peruukin valinnassa, sovituksessa sekä sen muotoilussa ja huollossa arjen käyttöön. Palvelu hoidetaan aina rauhassa ja yksilöllisesti.</p>
+        <ul class="wigs-list">
+          <li>Henkilökohtainen sovitus ja koon säätö</li>
+          <li>Leikkaus ja muotoilu omaan tyyliin sopivaksi</li>
+          <li>Huolto- ja pesuneuvonta</li>
+          <li>Mahdollisuus kotikäynteihin tarvittaessa</li>
+        </ul>
+        <a href="tel:+358447506505" class="btn btn-primary">Kysy lisää &ndash; 044 7506 505</a>
+      </div>
+      <div class="wigs-visual" aria-hidden="true">
+        <svg viewBox="0 0 320 320" class="wigs-illustration">
+          <circle cx="160" cy="160" r="150" class="ring-outer"/>
+          <circle cx="160" cy="160" r="118" class="ring-inner"/>
+          <path d="M100 150c0-45 27-80 60-80s60 35 60 80c0 15-4 26-9 38-6-10-10-14-18-14-10 0-14 10-22 10s-12-10-22-10-13 4-19 14c-6-12-10-24-10-38z" class="wig-shape"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="hinnasto">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hinnasto</p>
+        <h2 class="display">Hinnat</h2>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Leikkaukset</h3>
+          <ul class="price-list">
+            <li><span>30 min</span><span>30 &euro;</span></li>
+            <li><span>45 min</span><span>35 &euro;</span></li>
+            <li><span>60 min (esim. mallinmuutos)</span><span>42 &euro;</span></li>
+            <li><span>Koneajelu / otsatukka (max 10 min)</span><span>15 &euro;</span></li>
+          </ul>
+          <p class="price-note">Edellä mainitut leikkaukset sisältävät föönauksen.</p>
+        </div>
+        <div class="price-card">
+          <h3>Värjäykset ja raidat</h3>
+          <ul class="price-list">
+            <li><span>Lyhyet</span><span>69 &euro; <em>/ monisävyvärjäys 75 &euro;</em></span></li>
+            <li><span>Puolipitkät</span><span>79 &euro; <em>/ monisävyvärjäys 85 &euro;</em></span></li>
+            <li><span>Pitkät</span><span>89 &euro; <em>/ monisävyvärjäys 95 &euro;</em></span></li>
+            <li><span>Raidat</span><span>69 &euro;/tunti</span></li>
+          </ul>
+          <p class="price-note">Värjäykset sisältävät kuivauksen.</p>
+        </div>
+        <div class="price-card">
+          <h3>Kampaukset</h3>
+          <ul class="price-list">
+            <li><span>Pesu ja föönaus (max 30 min)</span><span>30 &euro;</span></li>
+            <li><span>Pesu ja rullakampaus</span><span>36 &euro;</span></li>
+            <li><span>Kampaukset tuntiveloituksella</span><span>70 &euro;/tunti</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Kiharat</h3>
+          <ul class="price-list">
+            <li><span>Lyhyet</span><span>69 &euro;</span></li>
+            <li><span>Puolipitkät</span><span>79 &euro;</span></li>
+            <li><span>Erikoispuolaukset</span><span>75 &euro;/tunti</span></li>
+            <li><span>Osapermanentti (max 15 rll)</span><span>50 &euro;</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Kulmat ja ripset</h3>
+          <ul class="price-list">
+            <li><span>Kulmien väri tai muotoilu</span><span>15 &euro;</span></li>
+            <li><span>Kulmien väri ja muotoilu</span><span>23 &euro;</span></li>
+            <li><span>Ripsien värjäys</span><span>20 &euro;</span></li>
+            <li><span>Kulmat ja ripset</span><span>30 &euro;</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Erikoistyöt</h3>
+          <ul class="price-list">
+            <li><span>Tehohoito (hoito, hieronta, föönaus)</span><span>42 &euro;</span></li>
+            <li><span>Erikoistyöt (esim. pidennykset)</span><span>75 &euro;/tunti</span></li>
+            <li><span>Peruukin huolto tai leikkaus</span><span>25 &euro;</span></li>
+            <li><span>Peruukkipalvelut</span><span>75 &euro;/tunti</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="price-terms">Kaikki palvelut sisältävät 25,5&nbsp;% arvonlisäveron. Peruuttamattomista ajoista veloitetaan 50&nbsp;% palvelun hinnasta.</p>
+    </div>
+  </section>
+
+  <section class="about" id="minusta">
+    <div class="wrap about-inner">
+      <div class="about-portrait" aria-hidden="true">
+        <span>AE</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Minusta</p>
+        <h2 class="display">Anu Edman</h2>
+        <p>Olen toiminut parturi-kampaajana yli 20 vuotta ja autan sinua ammattitaidolla ja palvelulla kaikissa hiustenhoitoon liittyvissä asioissa. Viime vuosina olen erikoistunut peruukkipalveluun ja panostan siihen, että jokainen asiakas saa yksilöllistä ja lämmintä palvelua.</p>
+        <p>Liikkeeni sijaitsee aivan Porin keskustassa, katutasossa Katariinankadulla &ndash; alueella on myös ilmaiset pysäköintitilat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="sijainti">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Sijainti &amp; ajanvaraus</p>
+        <h2 class="display">Helppo tulla, keskellä Poria</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Käyntiosoite</h3>
+          <p>Katariinankatu 9<br>28100 Pori</p>
+          <p class="muted">Ilmaiset pysäköintitilat alueella.</p>
+        </div>
+        <div class="info-card">
+          <h3>Ajanvaraus</h3>
+          <p><a href="tel:+358447506505">044 7506 505</a></p>
+          <p class="muted">Avoinna sopimuksen mukaan, myös iltaisin ja lauantaisin. Kotikäynnit lähialueella tarvittaessa.</p>
+        </div>
+        <div class="info-card">
+          <h3>Maksutavat</h3>
+          <p class="muted">Käteinen, Debit-pankkikortti, Visa, Mastercard ja Visa Electron.</p>
+        </div>
+        <div class="info-card">
+          <h3>Seuraa somessa</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1E2iVmqCjQ/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7C15.9 3.6 15 3.5 14 3.5c-2.5 0-4.2 1.5-4.2 4.3v2.1H7v3.1h2.8V21h3.7z" fill="currentColor"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          title="Anu Edman, Katariinankatu 9, Pori &ndash; kartta"
+          src="https://www.google.com/maps?q=Katariinankatu+9,+28100+Pori&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+<?php get_footer(); ?>
